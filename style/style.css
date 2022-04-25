@@ -15,6 +15,10 @@
        url("../fonts/Overpass-Bold.ttf") format("ttf"),
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body {
   background-color: hsl(216, 12%, 8%);
   font-family: "Overpass", sans-serif;
@@ -24,6 +28,7 @@ body {
 .thank-state {
   display: none;
 }
+
 
 .state__header {
   color: hsl(0, 0%, 100%);
@@ -48,6 +53,8 @@ body {
   height: 415px;
   border-radius: 30px;
   margin: calc(50vh - 410px / 2) auto;
+  word-spacing: 1px;
+  padding-right: 10px;
 }
 
 .rating-state__starBlock {
@@ -74,4 +81,181 @@ body {
   position: absolute;
   top:140px;
   left:33px;
+}
+
+/* buttons */
+
+.rating__buttons {
+  position: absolute;
+  top:255px;
+  left:30px;
+}
+
+.rating__buttons--button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background-color: #2d3842;
+  margin-right: 16px;
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+}
+
+.rating__buttons--button:hover {
+  background-color: hsl(217, 12%, 63%);
+  color:hsl(0, 0%, 100%);
+}
+
+.rating__buttons--button:active {
+  background-color: hsl(25, 97%, 53%);
+  color:hsl(0, 0%, 100%);
+}
+
+.rating-state__submit {
+  position: absolute;
+  bottom: 30px;
+  left: 32px;
+  height: 45px;
+  width: 340px;
+  border-radius: 50px;
+  border: none;
+  color:hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.rating-state__submit:active {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+
+/* thank state */
+
+.thank-state__img {
+  margin: 44px 0 0 0;
+  margin-left: calc((50% - 162px / 2) - 3px );
+}
+
+.thank-state__selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 195px;
+  height: 32px;
+  border-radius: 50px;
+  margin: 28px 0 0 110px;
+  font-size: 15px;
+  color: hsl(25, 97%, 53%);
+  background-color: #2d3842;
+}
+
+.thank-state__header {
+  display: inline-block;
+  margin: 34px 0 0 136px;
+}
+
+.thank-state__text {
+  width: 85%;
+  margin: 12px 0 0 24px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+
+}
+
+
+@media (max-width: 375px) {
+  .rating-state, .thank-state {
+    width: 325px;
+    height: 360px;
+    border-radius: 10px;
+    padding-right: 20px;
+  }
+
+  .rating-state__starBlock {
+    top:24px;
+    left:24px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .rating-state__star{
+    margin: 30% 0 0 30%
+  }
+
+  .state__header {
+    font-size: 22px;
+  }
+  
+  .state__text {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: normal;
+    word-spacing: 1px;
+  }
+
+  .rating-state__header {
+    top:84px;
+    left:22px;
+  }
+  
+  .rating-state__text {
+    top:105px;
+    left:22px;
+  }
+
+  .rating__buttons {
+    top:217px;
+    left:22px;
+  }
+  
+  .rating__buttons--button {
+    width: 42px;
+    height: 42px;
+    margin-right: 14px;
+  }
+
+  .rating-state__submit {
+    bottom: 32px;
+    left: 22px;
+    width: 280px;
+    border-radius: 50px;
+    border: none;
+    color:hsl(0, 0%, 100%);
+    background-color: hsl(25, 97%, 53%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .rating__buttons--button:active {
+    background-color: none;
+    color:hsl(0, 0%, 100%);
+  }
+
+  
+/* thank state mobile */
+
+.thank-state__img {
+  margin: 24px 0 0 80px;
+}
+
+.thank-state__selected {
+  width: 170px;
+  height: 32px;
+  margin: 16px 0 0 77px;
+  font-size: 14px;
+}
+
+.thank-state__header {
+  margin: 28px 0 0 104px;
+}
+
+.thank-state__text {
+  margin: 14px 0 0 20px;
+
+  text-align: center;
+}
+  
 }
