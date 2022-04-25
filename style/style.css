@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Overpass";
+  font-style: regular;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Overpass"),
+       url("../fonts/Overpass-Regular.ttf") format("ttf"),
+}
+@font-face {
+  font-family: "Overpass";
+  font-style: bold;
+  font-weight: 700;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Overpass"),
+       url("../fonts/Overpass-Bold.ttf") format("ttf"),
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+}
+
+.thank-state {
+  display: none;
+}
+
+.state__header {
+  color: hsl(0, 0%, 100%);
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Overpass",
+}
+
+.state__text {
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Overpass";
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.rating-state, .thank-state {
+  position: relative;
+  background-color: hsl(213, 19%, 18%);
+  width: 410px;
+  height: 415px;
+  border-radius: 30px;
+  margin: calc(50vh - 410px / 2) auto;
+}
+
+.rating-state__starBlock {
+  position: absolute;
+  top:31px;
+  left:31px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #2d3842;
+}
+
+.rating-state__star{
+  margin: 35% 0 0 35%;
+}
+
+.rating-state__header {
+  position: absolute;
+  top:112px;
+  left:33px;
+}
+
+.rating-state__text {
+  position: absolute;
+  top:140px;
+  left:33px;
+}
