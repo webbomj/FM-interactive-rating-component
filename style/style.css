@@ -102,15 +102,7 @@ body {
   font-size: 15px;
 }
 
-.rating__buttons--button:hover {
-  background-color: hsl(217, 12%, 63%);
-  color:hsl(0, 0%, 100%);
-}
 
-.rating__buttons--button:active {
-  background-color: hsl(25, 97%, 53%);
-  color:hsl(0, 0%, 100%);
-}
 
 .rating-state__submit {
   position: absolute;
@@ -163,6 +155,18 @@ body {
   font-weight: 400;
   text-align: center;
 
+}
+
+@media (min-width: 700px) {
+  .rating__buttons--button:hover {
+    background-color: hsl(217, 12%, 63%);
+    color:hsl(0, 0%, 100%);
+  }
+  
+  .rating__buttons--button:active {
+    background-color: hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+  }
 }
 
 
